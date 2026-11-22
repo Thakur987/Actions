@@ -1,1 +1,14 @@
-
+name : my first workflow
+on: push
+jobs:
+ first-job:
+  name : Unit
+  runs-on : [Ubuntu-latest]
+  steps:
+   -name : run first job
+    run : run "my first step"
+   -name : list files
+    run : ls
+   -name : read files
+    run : cat README.md
+    
